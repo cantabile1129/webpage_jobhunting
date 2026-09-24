@@ -1,0 +1,172 @@
+:root {
+  --ink: #1d2629;
+  --muted: #536065;
+  --accent: #285c50;
+  --rule: #ccd5d1;
+  --soft: #f5f8f6;
+  color-scheme: light;
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--ink); background: #fff; line-height: 1.75; }
+a { color: inherit; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+section { scroll-margin-top: 2rem; }
+h1, h2, h3, p { margin-top: 0; }
+.wrap { width: min(1050px, calc(100% - 48px)); margin-inline: auto; }
+.skip { position: absolute; top: -100px; left: 1rem; z-index: 10; padding: .6rem 1rem; background: var(--ink); color: white; }
+.skip:focus { top: 1rem; }
+
+.sample-bar {
+  padding: .45rem 1rem;
+  border-bottom: 1px solid var(--rule);
+  color: var(--muted);
+  background: var(--soft);
+  text-align: center;
+  font-size: .75rem;
+  line-height: 1.5;
+}
+.site-header { background: #fff; }
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-height: 74px;
+  border-bottom: 1px solid var(--ink);
+}
+.brand { text-decoration: none; font-size: .92rem; font-weight: 700; letter-spacing: .02em; }
+.brand-mark { display: none; }
+.header-nav { display: flex; flex-wrap: wrap; gap: 2rem; font-size: .84rem; }
+.header-nav a { text-decoration: none; }
+.header-nav a:hover, .text-link:hover, .button:hover { color: var(--accent); }
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr);
+  gap: clamp(2.5rem, 8vw, 7rem);
+  align-items: end;
+  padding-block: clamp(4rem, 7vw, 6rem) clamp(3.8rem, 6vw, 5.3rem);
+}
+.eyebrow, .section-label, .case-id {
+  color: var(--accent);
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+.eyebrow { margin-bottom: 1.15rem; }
+h1 {
+  margin-bottom: 1.7rem;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", "MS PMincho", serif;
+  font-size: clamp(3.7rem, 7vw, 6.4rem);
+  font-weight: 600;
+  letter-spacing: -.075em;
+  line-height: 1.16;
+}
+.hero-lead { max-width: 580px; margin-bottom: 1.7rem; font-size: 1.05rem; line-height: 1.9; }
+.hero-actions { display: flex; gap: 1rem; }
+.button {
+  display: inline-block;
+  min-height: 34px;
+  border: 0;
+  border-bottom: 1.5px solid var(--accent);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: .88rem;
+  font-weight: 700;
+}
+.hero-meta { padding-top: 1.1rem; border-top: 1px solid var(--rule); }
+.hero-meta .name { margin-bottom: .7rem; font-size: 1rem; font-weight: 700; }
+.hero-meta p { margin-bottom: .55rem; color: var(--muted); font-size: .9rem; }
+
+.section { padding-block: clamp(4.1rem, 6vw, 5.5rem); }
+.section-tint { background: var(--soft); }
+.section-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: 2.3rem;
+}
+.section-label { margin-bottom: .45rem; }
+h2 { margin-bottom: 0; font-size: clamp(1.8rem, 3vw, 2.45rem); font-weight: 700; letter-spacing: -.06em; line-height: 1.4; }
+.section-note { max-width: 360px; margin-bottom: .2rem; color: var(--muted); font-size: .88rem; }
+
+.work-grid { border-top: 1px solid var(--ink); }
+.work-card {
+  display: grid;
+  grid-template-columns: 130px minmax(260px, 1.15fr) minmax(220px, .85fr) 135px;
+  align-items: start;
+  gap: 1.5rem;
+  padding: 1.65rem 0 1.75rem;
+  border-bottom: 1px solid var(--rule);
+}
+.card-top { display: flex; flex-direction: column; align-items: start; gap: .35rem; }
+.card-number { font-family: "Yu Mincho", Georgia, serif; font-size: 1.8rem; line-height: 1.2; }
+.card-kind { color: var(--muted); font-family: ui-monospace, Consolas, monospace; font-size: .67rem; letter-spacing: .03em; }
+.work-card h3 { margin-bottom: 0; font-size: 1.23rem; font-weight: 700; line-height: 1.55; letter-spacing: -.04em; }
+.work-card h3 br { display: none; }
+.work-card p { margin-bottom: 0; color: var(--muted); font-size: .88rem; line-height: 1.8; }
+.text-link { color: var(--accent); font-size: .81rem; font-weight: 700; text-decoration: underline; text-underline-offset: 4px; white-space: nowrap; }
+
+.case {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: clamp(2.2rem, 7vw, 6rem);
+  padding-block: 3.4rem;
+  border-top: 1px solid var(--rule);
+}
+.case:first-of-type { border-top: 1px solid var(--ink); }
+.case-side { display: flex; flex-direction: column; align-items: start; gap: .4rem; }
+.case-tag { color: var(--muted); font-size: .81rem; }
+.case-body h3 {
+  margin-bottom: .8rem;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", "MS PMincho", serif;
+  font-size: clamp(1.45rem, 2.4vw, 1.95rem);
+  font-weight: 600;
+  line-height: 1.5;
+}
+.case-summary { max-width: 680px; margin-bottom: 1.8rem; color: var(--muted); font-size: .98rem; }
+.case-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.4rem; margin: 0; }
+.case-facts div { padding-top: .65rem; border-top: 1px solid var(--rule); }
+.case-facts dt { margin-bottom: .4rem; font-size: .78rem; font-weight: 700; }
+.case-facts dd { margin: 0; color: var(--muted); font-size: .85rem; line-height: 1.8; }
+
+.profile-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(310px, .9fr); gap: clamp(3rem, 9vw, 8rem); }
+.profile-copy { max-width: 530px; margin-top: 1.5rem; color: var(--muted); }
+.info-list { display: grid; gap: 1rem; margin: 0; }
+.info-list div { padding-bottom: 1rem; border-bottom: 1px solid var(--rule); }
+.info-list dt { margin-bottom: .2rem; font-size: .77rem; font-weight: 700; }
+.info-list dd { margin: 0; color: var(--muted); font-size: .89rem; }
+.footer { padding-block: 2rem; }
+.footer-inner { display: flex; justify-content: space-between; gap: 1.5rem; border-top: 1px solid var(--ink); padding-top: 1.4rem; color: var(--muted); font-size: .78rem; }
+.footer p { margin: 0; }
+
+@media (max-width: 900px) {
+  .work-card { grid-template-columns: 100px minmax(0, 1fr) minmax(0, 1fr); }
+  .text-link { grid-column: 2 / -1; }
+  .hero-inner { grid-template-columns: minmax(0, 1.2fr) minmax(220px, .8fr); }
+}
+@media (max-width: 680px) {
+  .wrap { width: min(100% - 32px, 1050px); }
+  .header-inner { min-height: 84px; align-items: start; flex-direction: column; justify-content: center; gap: .45rem; }
+  .header-nav { gap: 1.3rem; font-size: .79rem; }
+  .hero-inner { grid-template-columns: 1fr; gap: 2.2rem; padding-block: 3.7rem 3.8rem; }
+  h1 { font-size: clamp(3.55rem, 13vw, 5rem); }
+  .section-head { align-items: start; flex-direction: column; gap: .7rem; }
+  .work-card { grid-template-columns: 66px minmax(0, 1fr); gap: .9rem 1rem; }
+  .card-top { grid-row: 1 / span 3; }
+  .work-card h3, .work-card p, .text-link { grid-column: 2; }
+  .case { grid-template-columns: 1fr; gap: .8rem; padding-block: 2.7rem; }
+  .case-side { flex-direction: row; gap: 1rem; }
+  .case-facts { grid-template-columns: 1fr; gap: 1rem; }
+  .profile-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-inner { flex-direction: column; gap: .4rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
