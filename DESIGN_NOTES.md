@@ -22,6 +22,8 @@
 - [U.S. Web Design System：Using color](https://designsystem.digital.gov/design-tokens/color/overview/) — 色を用途ごとに使う考え方を、白・淡い背景・濃い文字・深緑のアクセントに反映した。
 - [GOV.UK Design System：Type scale](https://design-system.service.gov.uk/styles/type-scale/) — 一貫した文字サイズの段階を、氏名・セクション見出し・本文・補足の差に反映した。
 - [W3C：Understanding Success Criterion 1.4.3 Contrast (Minimum)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum) — 本文 4.5:1 以上、大きな文字 3:1 以上の基準を、文字色と背景色の確認に使った。
+- [W3C WAI：Links and controls](https://www.w3.org/WAI/ARIA/apg/patterns/link/) — 外部リンクは文字だけに依存せず、四隅の開いた矢印アイコンを併記する。アイコンには `aria-hidden="true"` を設定し、リンクの名称は本文テキストで伝える。
+- [W3C WAI：Language of Page](https://www.w3.org/WAI/WCAG22/Understanding/language-of-page.html) — 日本語／英語の切替時に `html` 要素の `lang` 属性を更新し、表示言語を支援技術にも伝える。
+- [MDN：position](https://developer.mozilla.org/en-US/docs/Web/CSS/position) — ページ内移動をしやすくするため、ヘッダーを `position: sticky` で固定し、各セクションのスクロール位置をヘッダーの高さに合わせる。
 
 公開前には仮の情報を実際の経歴・成果に置き換え、文章量に合わせて画面を再確認してください。
-
